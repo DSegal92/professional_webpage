@@ -44,51 +44,24 @@ abbr,acronym { border:0;
 
 /***** FONTS *****/
 @font-face {
-    font-family: 'edmondsans_medium';
-    src: url('<%= asset_path 'edmondsans-medium-webfont.eot'%>');
-    src: url('<%= asset_path 'edmondsans-medium-webfont.eot?#iefix'%>') format('embedded-opentype'),
-         url('<%= asset_path '/assets/edmondsans-medium-webfont.woff'%>') format('woff'),
-         url('<%= asset_path '/assets/edmondsans-medium-webfont.ttf'%>') format('truetype'),
-         url('<%= asset_path '/assets/edmondsans-medium-webfont.svg#edmondsansmedium'%>') format('svg');
+    font-family: 'tradegothic';
+    src: url('<%= asset_path '/assets/tradegothic.eot'%>'),
+         url('<%= asset_path '/assets/tradegothic.woff'%>') format('woff'),
+         url('<%= asset_path '/assets/tradegothic.ttf'%>') format('truetype'),
+         url('<%= asset_path '/assets/tradegothic.svg#TradeGothicLTCondEighteenBold'%>') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 
-@font-face {
-    font-family: 'edmondsans_bold';
-    src: url('<%= asset_path 'edmondsans-bold-webfont.eot'%>');
-    src: url('<%= asset_path 'edmondsans-bold-webfont.eot?#iefix'%>') format('embedded-opentype'),
-         url('<%= asset_path 'edmondsans-bold-webfont.woff'%>') format('woff'),
-         url('<%= asset_path 'edmondsans-bold-webfont.ttf'%>') format('truetype'),
-         url('<%= asset_path 'edmondsans-bold-webfont.svg#edmondsansbold'%>') format('svg');
-    font-weight: normal;
-    font-style: normal;
+/******* HEADER *******/
 
+#header{
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    background-image: url(/assets/agsquare.png);    
 }
-
-@font-face {
-    font-family: 'edmondsans_regular';
-    src: url('<%= asset_path 'edmondsans-regular-webfont.eot'%>');
-    src: url('<%= asset_path 'edmondsans-regular-webfont.eot?#iefix'%>') format('embedded-opentype'),
-         url('<%= asset_path 'edmondsans-regular-webfont.woff'%>') format('woff'),
-         url('<%= asset_path 'edmondsans-regular-webfont.ttf'%>') format('truetype'),
-         url('<%= asset_path 'edmondsans-regular-webfont.svg#edmondsans_regularregular'%>') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-/***** HOME PAGE ******/
-
-body{
-    background-image: url(/assets/office.png);
-}
-.container_16{
-	background-image: url(/assets/agsquare.png);	
-	font-style: normal;
-}
-
 .rib_effect {
     width: 996px;
      position: relative;
@@ -117,7 +90,7 @@ padding-right: 20px;
      left: -72px;
 }
 
-.rib_effect .rib_text:before {
+.rib_effect .rib_text:after, .rib_text:before {
      position: absolute;
      border-style: solid;
      border-color: #b2362b transparent;
@@ -130,16 +103,66 @@ padding-right: 20px;
      border-width: 18px 0 0 18px;
  }
 
+ .rib_effect .rib_text:after {
+     right: 0;
+     border-width: 18px 18px 0 0;
+ }
+
+#navlink:hover{
+       color: #fff;
+    }
+
+#home{
+        padding-left: 90px;
+        padding-right: 120px;
+            
+    }
+#resume{
+        padding-left: 40px;
+        padding-right: 120px;
+    }
+#projects{
+        padding-left: 40px;
+        padding-right: 150px;
+    }
+#contact{
+        padding-left: 60px;
+        padding-right: 100px;
+    }
+
+
+a{
+    text-decoration: none;
+}
+
+.navbar a:visited{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+/***** HOME PAGE ******/
+
+body{
+    background-image: url(/assets/office.png);
+}
+.container_16{
+	background-image: url(/assets/agsquare.png);	
+	font-style: normal;
+}
+
 
 h1 {
-    font-family: 'TradeGothic LT CondEighteen', sans-serif; 
+    font-family: 'tradegothic', sans-serif; 
     font-size: 30px;
     line-height: 45px;
     font-style: normal;
 }
 
 h2 {
-	font-family: 'TradeGothic LT CondEighteen', sans-serif;  
+	font-family: 'tradegothic', sans-serif;  
 	font-size: 26px;
 	line-height: 18px;
 	font-style: normal;
@@ -150,45 +173,12 @@ h2 {
 }
 
 
-a{
-    text-decoration: none;
-}
-
-#header{
-    text-align: center;
-    padding-bottom: 50px;
-    padding-top: 10px;
-    background-image: url(/assets/agsquare.png);    
-}
-
 h3 {
     font-family: 'Georgia', sans-serif;  
     font-size: 20px;
-    line-height: 18px;
+    line-height: 24px;
     font-style: normal;
 }
-
-#navlink:hover{
-       color: #fff;
-    }
-
-#home{
-        padding-left: 110px;
-        padding-right: 110px;
-    }
-#resume{
-        padding-left: 40px;
-        padding-right: 100px;
-    }
-#projects{
-        padding-left: 40px;
-        padding-right: 130px;
-    }
-#contact{
-        padding-left: 60px;
-        padding-right: 100px;
-    }
-
 
 #bio_space{
     padding-bottom: 60px;
@@ -258,6 +248,51 @@ h3 {
     font-style: normal;
 }
 
+/**** RESUME ****/
+.section_head {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 45px;
+}
+
+.section_head li{
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+     padding-left: 12px;
+}
+
+.courses {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 45px;
+}
+
+.courses li{
+    font-family: 'Georgia', serif;
+}
+
+#research{
+     font-family: 'Georgia', serif;
+     padding-left: 12px;
+}
+
+.indent{
+    padding-left: 24px;
+}
+
+.spacer{
+    padding-bottom: 10px;
+}
+
+#other{
+    padding-left: 60px;
+
+}
+
+#courses{
+    padding-left: 50px;
+}
+
 /* Footer
 -------------------------------------------------- */
 #footer {
@@ -268,6 +303,7 @@ h3 {
 }
 
 /****** BUTTON ******/
+
 
 .download {
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -286,9 +322,7 @@ h3 {
     font-family:arial;
     font-size:15px;
     font-weight:bold;
-    margin-top: 35px;
-    margin-bottom: 30px;
-    padding:10px 30px;
+    padding:6px 24px;
     text-decoration:none;
     text-shadow:1px 1px 0px #ffffff;
 }.download:hover {

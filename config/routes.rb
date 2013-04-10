@@ -2,6 +2,9 @@ ProfessionalWebpage::Application.routes.draw do
 
 
   root to: 'static_pages#index'
+
+  match '/resume' => "static_pages#resume"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
