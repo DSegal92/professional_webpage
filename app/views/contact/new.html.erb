@@ -1,5 +1,52 @@
- <%= form_for @contact, :url => { :action => "new" } do |f| %>
-
- 	
-  <%= f.submit "Submit" %>
-<% end %>
+<div class="container_16">
+	<div class="grid_12 prefix_2 suffix_2">
+			<div class="contact_preface">
+			<h3> Thanks for checking out my website. If there's anything on your mind, send me a message and I'll get back to you as soon as possible.</h3>
+		</div>
+	</div>
+	<% if flash[:notice] %>
+	<div class="grid_16">
+		<div class="notice">
+      		<%= flash[:notice] %>   			
+   		</div>
+	</div>
+	<% end %>
+	<div class="grid_14 prefix_2">	
+		<div id="contact_form">
+	
+			<%= form_for @contact, :url => { :action => "create" } do |f| %>
+			<div class="grid_3">
+				<ul>
+			 		<li><h2>Name<span id="imp">*</span></h2></li>
+			 		<li><%= f.text_field :name, :id => "name" , :class => "textbox"%></li>
+			 		<li><h2>Email<span id="imp">*</span></h2></li>
+			 		<li><%= f.text_field :email, :id => "email", :class => "textbox" %></li>
+			 		<li><h2>Company</h2></li>
+			 		<li><%= f.text_field :company, :id => "company", :class => "textbox" %></li>
+			 		<li><h2>Website</h2></li>
+			 		<li><%= f.text_field :website, :id => "website", :class => "textbox" %></li>
+			 	</ul>
+			 </div>
+			<div class="grid_8 prefix_2">
+				<ul>
+			 		<li><h2>Subject</h2></li>
+			 		<li><%= f.text_field :topic, :id => "subject", :class => "textbox"%></li>
+			 		<li><h2> Message<span id="imp">*</span> </h2></li>
+			 		<li><%= f.text_area :message, :id => "message", :class => "textbox_large" %></li>
+			 	</ul>
+			 </div>
+		</div>	 	
+	</div>
+	<div class="grid_16">
+		<br><br>
+		<center>
+			<%= f.submit "Submit", :class => "download" %>
+			<% end %>
+		</center>
+		<br>
+	</div>
+	<div class="grid_3 prefix_12">
+		 <h3><span id="imp">*</span> Required Field </h3>
+	</div>
+	<br><br>
+</div>
