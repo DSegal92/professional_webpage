@@ -7,6 +7,7 @@ ProfessionalWebpage::Application.routes.draw do
   match '/contact' => "contact#new"
   match '/contact/create' => "contact#create"
   match '/projects' => "static_pages#projects"
+  match '/usability' => "static_pages#usability"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

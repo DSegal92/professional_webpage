@@ -10,4 +10,7 @@ class StaticPagesController < ApplicationController
 
 	def projects
 	end
+
+	def usability
+	end
 end
